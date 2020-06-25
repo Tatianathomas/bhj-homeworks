@@ -2,13 +2,14 @@ const time = function () {
     const count = document.getElementById('timer');
     count.textContent--;
     if (count.textContent < 1) {
-        clearInterval(time, alert('Вы победили в конкурсе!'));
+        alert('Вы победили в конкурсе!')
     } 
 } 
+const interval = setInterval(time, 1000);
 setInterval(time, 1000);
+clearInterval(interval);
 
-// не поняла, как остановить таймер на 0, чтобы при клике на диалоговое окно дальше не щелкал в минус.
-// надо как-то выдернуть clearInterval, но вне функции у меня не работает(
+
 
 
 /*
